@@ -9,10 +9,10 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
           Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -51,19 +51,19 @@ class WelcomePage extends StatelessWidget {
                 ]),
             textAlign: TextAlign.center,
           ),
-          Row(
+          const Row(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(PersonalPortfolioIcons.badge,
+                Icon(PersonalPortfolioIcons.badge,
                     color: PersonalPortfolioColors.twitterPrimary, size: 80),
-                const SizedBox(width: 20),
+                SizedBox(width: 20),
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Text('Mobile and Web Developer (Flutter)',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 40, color: Colors.white)),
@@ -71,8 +71,10 @@ class WelcomePage extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 40, color: Colors.white)),
                   ],
-                )
-              ])
-        ]));
+                ),
+              ]),
+        ],
+      ),
+    );
   }
 }
