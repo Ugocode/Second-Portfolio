@@ -6,11 +6,10 @@ class WelcomePageViewModel {
   final Ref ref;
   final IWelcomeRepository welcomeRepository;
 
-  WelcomePageViewModel(this.ref, this.welcomeRepository);
+  WelcomePageViewModel(this.welcomeRepository, this.ref);
 
   Future<WelcomePageModel> getWelcomePageData() async {
     var welcomePageData = await welcomeRepository.getWelcomePageData();
-
     return welcomePageData;
   }
 }
