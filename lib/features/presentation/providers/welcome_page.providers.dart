@@ -13,7 +13,13 @@ final welcomeViewModelProvider = Provider<WelcomePageViewModel>((ref) {
   return WelcomePageViewModel(repository, ref);
 });
 
+//provider for he greetings:
 final welcomeProvider = FutureProvider((ref) {
   final welcomeVM = ref.read(welcomeViewModelProvider);
   return welcomeVM.getWelcomePageData();
+});
+
+// provider for the greetings to appear on rhe home screen
+final greetingsRawListProvider = StateProvider<List<String>>((ref) {
+  return [];
 });
