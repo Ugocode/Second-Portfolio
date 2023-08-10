@@ -10,7 +10,7 @@ class PersonalPortfolioColors {
   static const Color mainBlue = Color(0xFF51BFD7);
   static const Color secondaryBlue = Color(0XFF1E6B7C);
   static const Color lightBlue = Color(0xFF5DD1EB);
-  static const Color textColor = Colors.white;
+  static const Color textColor = Color(0xFFFFFFFF);
   static const Color primaryDark = Color(0xFF1F6D7E);
   static const Color lightLabel = Color(0xFFD5F4FB);
   static const Color errorIcon = Color(0xFFFFB5B5);
@@ -22,6 +22,8 @@ class PersonalPortfolioColors {
   static const Color welcomeIcon = Color(0xFFFFF1BF);
   static const Color welcomePrimary = Color(0xFFF2C41C);
   static const Color welcomeSecondary = Color(0xE76B4E00);
+  static const LinearGradient greetingsColor =
+      LinearGradient(colors: [Colors.green, Colors.red, Colors.blue]);
 
   //twitter
   static const Color twitterIcon = Color(0xFF72C9FF);
@@ -74,4 +76,9 @@ class PersonalPortfolioColors {
       PersonalPortfolioColors.webSecondary
     ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
   };
+  // // greetings gradient
+  // static  Colors = List<LinearGradient> greetingsColor = [
+  //   const LinearGradient(colors: [Colors.green, Colors.red, Colors.blue])
+
+  // ];
 }
