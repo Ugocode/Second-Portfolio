@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:second_portfolio/features/Welcome/presentation/widgets/greetings_label.dart';
 import 'package:second_portfolio/features/presentation/providers/welcome_page.providers.dart';
+import 'package:second_portfolio/shared/widgets/error_notification.dart';
 import 'package:second_portfolio/styles/colors.dart';
 import 'package:second_portfolio/styles/personal_portfolio_icons.dart';
 
@@ -17,7 +19,8 @@ class WelcomePage extends ConsumerWidget {
                 child: CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation(Colors.white),
             )),
-        error: (error, stackTrace) => const Text('error'),
+        error: (error, stackTrace) =>
+            ErrorNotification(message: error.toString()),
         data: (welcomeData) {
           return Center(
               child: Column(
@@ -43,13 +46,14 @@ class WelcomePage extends ConsumerWidget {
                       const Icon(PersonalPortfolioIcons.wave,
                           size: 90, color: PersonalPortfolioColors.welcomeIcon)
                     ]),
-                Text(
-                  welcomeData.greetings[0],
-                  style: const TextStyle(
-                      fontSize: 100,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
+                const GreetingsLabel(),
+                // Text(
+                //   welcomeData.greetings[0],
+                //   style: const TextStyle(
+                //       fontSize: 100,
+                //       fontWeight: FontWeight.bold,
+                //       color: Colors.white),
+                // ),
                 Text.rich(
                   TextSpan(
                       style:
