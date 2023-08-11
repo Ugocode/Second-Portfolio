@@ -38,6 +38,8 @@ dependencies:
   go_router:
   flutter_riverpod: ^2.3.6
   simple_gradient_text: ^1.2.4
+  url_launcher: ^6.1.12
+
 
 dev_dependencies:
   flutter_test:
