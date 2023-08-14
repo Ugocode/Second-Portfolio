@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:second_portfolio/styles/personal_portfolio_icons.dart';
 
 class LinkedInPage extends StatelessWidget {
   static const String route = "/linkedin";
@@ -6,8 +7,40 @@ class LinkedInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Liknedin Page!'),
-    );
+    return Center(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Icon(
+          PersonalPortfolioIcons.linkedin,
+          size: 80,
+          color: Colors.white,
+        ),
+        const Text(
+          "Let's",
+          style: TextStyle(
+              fontSize: 100, fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+        const Text(
+          'Connect',
+          style: TextStyle(
+              fontSize: 100, fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+        Container(
+          width: 300,
+          decoration: BoxDecoration(
+              color: Colors.lightBlue, borderRadius: BorderRadius.circular(50)),
+          child: const Center(
+            child: Text(
+              'on LinkedIn',
+              style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white54),
+            ),
+          ),
+        ),
+      ],
+    ));
   }
 }
