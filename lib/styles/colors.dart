@@ -3,7 +3,7 @@ import 'package:second_portfolio/features/Welcome/presentation/pages/welcome_pag
 import 'package:second_portfolio/features/github/presentation/pages/github.page.dart';
 import 'package:second_portfolio/features/linkedin/presentation/pages/linkedin.page.dart';
 import 'package:second_portfolio/features/website/presentation/pages/web.page.dart';
-import 'package:second_portfolio/twitter/presentation/pages/twitter.page.dart';
+import 'package:second_portfolio/features/twitter/presentation/pages/twitter.page.dart';
 
 class PersonalPortfolioColors {
 //for the dark theme
