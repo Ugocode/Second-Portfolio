@@ -5,7 +5,7 @@ import 'package:second_portfolio/features/navigation/data/models/left_navigation
 import 'package:second_portfolio/features/navigation/data/repositories/inavigation.repository.dart';
 import 'package:second_portfolio/features/website/presentation/pages/web.page.dart';
 import 'package:second_portfolio/styles/personal_portfolio_icons.dart';
-import 'package:second_portfolio/twitter/presentation/pages/twitter.page.dart';
+import 'package:second_portfolio/features/twitter/presentation/pages/twitter.page.dart';
 
 class MockNavigationRepository extends INavigationRepository {
   @override
@@ -15,7 +15,7 @@ class MockNavigationRepository extends INavigationRepository {
         icon: PersonalPortfolioIcons.user,
         label: 'My Profile',
         route: WelcomePage.route,
-        isSelected: true,
+        isSelected: false,
       ),
       LeftNavigationItem(
         icon: PersonalPortfolioIcons.twitter,
