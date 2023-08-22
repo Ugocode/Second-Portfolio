@@ -5,13 +5,21 @@ class MockWelcomeRepository implements IWelcomeRepository {
   @override
   Future<WelcomePageModel> getWelcomePageData() {
     return Future.delayed(const Duration(seconds: 2), () {
+      // return Future.error('Error retriving the welcome page Data');
       return WelcomePageModel(
           name: 'Ugocode',
-          title: 'Mobile and Web Developer (Flutter)',
-          subTitle: 'Technical Writer',
+          title: 'Mobile and Web Developer(Flutter)',
+          subTitle: '& Technical Writer',
           imgPath:
               'https://avatars.githubusercontent.com/u/40001366?s=400&u=3dd3e0563e6e0288c291dcc11cbebc0804e46de8&v=4',
-          greetings: ["hello", "hola", "bonjour", "ciao"]);
+          greetings: [
+            "hello",
+            "hola",
+            "bonjour",
+            "ciao",
+            "Nnọọ",
+            "Ẹ kú àbọ̀"
+          ]);
     });
   }
 }
