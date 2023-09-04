@@ -8,9 +8,9 @@ class MockGithubRepository implements IGithubRepository {
     return Future.delayed(const Duration(seconds: 2), () {
       return GitHubPageModel(
           gitHubIcon: PersonalPortfolioIcons.github,
-          subTitle: "My GitHub",
-          title: "Checkout",
-          url: "@GitHub");
+          subTitle: "My Repos",
+          title: "Check Out",
+          url: " on GitHub");
     });
   }
 }
