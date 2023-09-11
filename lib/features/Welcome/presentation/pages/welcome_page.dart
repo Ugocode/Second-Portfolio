@@ -12,15 +12,22 @@ class WelcomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    //watch the providr first
     var welcomeDataAsync = ref.watch(welcomeProvider);
 
     return welcomeDataAsync.when(
+
+        //circular loading widget
         loading: () => const Center(
                 child: CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation(Colors.white),
             )),
+
+        //catch error if it occurs
         error: (error, stackTrace) =>
             ErrorNotification(message: error.toString()),
+
+        //produce the data
         data: (welcomeData) {
           return Center(
               child: Column(
@@ -47,13 +54,6 @@ class WelcomePage extends ConsumerWidget {
                           size: 90, color: PersonalPortfolioColors.welcomeIcon)
                     ]),
                 const GreetingsLabel(),
-                // Text(
-                //   welcomeData.greetings[0],
-                //   style: const TextStyle(
-                //       fontSize: 100,
-                //       fontWeight: FontWeight.bold,
-                //       color: Colors.white),
-                // ),
                 Text.rich(
                   TextSpan(
                       style:
